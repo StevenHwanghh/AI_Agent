@@ -1,0 +1,8 @@
+# requirements.in
+langchain
+langchain-groq
+langchain-ollama
+python-dotenv
+black
+isort
+python-dotenv
