@@ -3,6 +3,9 @@ langchain-groq
 tavily-python
 langchain-tavily
 langchain-ollama
+langchain-openai
 python-dotenv
+pydantic
+typing
 black
 isort

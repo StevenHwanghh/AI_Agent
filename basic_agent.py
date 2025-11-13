@@ -33,7 +33,7 @@ agent = create_agent(model=model, tools=tools)
 
 def main():
     print("Hello from langchain-course!")
-    result = agent.invoke({"messages": [HumanMessage(content="Search AI Engineer jobs in Markham, Ontario")]} )
+    result = agent.invoke({"messages": HumanMessage(content="Search for AI Engineer job posting in Markham, Ontario")})
     print("Agent Result:", result)
     
 
