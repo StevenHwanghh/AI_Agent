@@ -1,0 +1,9 @@
+langchain
+langchain_openai
+langchain-groq
+langchain-ollama
+langchain-tavily
+langchain-classic
+python-dotenv
+black
+isort
