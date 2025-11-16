@@ -1,10 +1,11 @@
+from dotenv import load_dotenv
 from langchain.agents import create_agent
-from langchain_groq import ChatGroq
 from langchain.tools import tool
 from langchain_core.messages import HumanMessage
-from dotenv import load_dotenv
+from langchain_groq import ChatGroq
 # from tavily import TavilyClient           # First version I used to search by myself
-from langchain_tavily import TavilySearch   # Second verion that integrates Tavily with LangChain
+from langchain_tavily import \
+    TavilySearch  # Second verion that integrates Tavily with LangChain
 
 load_dotenv()  # Load environment variables from a .env file if present
 
@@ -26,16 +27,21 @@ load_dotenv()  # Load environment variables from a .env file if present
 search = TavilySearch()
 
 # Built up agent with Groq model and search tool
-model = ChatGroq(model="openai/gpt-oss-120b", temperature=1)
+model = ChatGroq(model="meta-llama/llama-4-scout-17b-16e-instruct", temperature=1)
 tools = [search]
 agent = create_agent(model=model, tools=tools)
 
 
 def main():
     print("Hello from langchain-course!")
-    result = agent.invoke({"messages": HumanMessage(content="Search for AI Engineer job posting in Markham, Ontario")})
+    result = agent.invoke(
+        {
+            "messages": HumanMessage(
+                content="Search for AI Engineer job posting in Markham, Ontario"
+            )
+        }
+    )
     print("Agent Result:", result)
-    
 
 
 if __name__ == "__main__":
