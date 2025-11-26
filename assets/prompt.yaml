@@ -1,0 +1,4 @@
+_type: prompt
+template: 'Please explain the concept of {name} for me?'
+input_variables:
+  - name

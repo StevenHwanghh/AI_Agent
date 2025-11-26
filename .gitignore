@@ -1,0 +1,17 @@
+.env
+.venv/
+
+# Byte-compiled / optimized / compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pyenv
+.python-version
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Installer logs
+requirements.in
